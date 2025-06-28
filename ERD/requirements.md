@@ -1,2 +1,2 @@
-![ER Diagram](airbnb_er_diagram.drawio.png)
+![ER Diagram](airbnb_er_diagrm.drawio.png)
 
