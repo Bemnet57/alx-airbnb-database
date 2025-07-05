@@ -15,6 +15,7 @@ FROM Booking b
 INNER JOIN User u ON b.user_id = u.user_id;
 
 --returns all properties, even those without reviews. If no review exists, the review columns will be NULL
+
 SELECT 
     p.property_id,
     p.name AS property_name,
@@ -24,7 +25,9 @@ SELECT
     r.comment,
     r.created_at AS review_date
 FROM Property p
-LEFT JOIN Review r ON p.property_id = r.property_id;
+LEFT JOIN Review r ON p.property_id = r.property_id
+ORDER BY p.property_id, r.review_id;
+
 
 
 -- returns Users with bookings, Bookings with users, Users without bookings, Bookings without users (possibly due to orphan records)
