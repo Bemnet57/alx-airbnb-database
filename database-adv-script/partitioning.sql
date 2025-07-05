@@ -13,8 +13,8 @@ CREATE TABLE Booking (
 ) PARTITION BY RANGE (start_date);
 
 -- ======================================
--- STEP 2: Create partitions (monthly as an example)
--- You can adjust for quarterly, yearly, etc.
+-- STEP 2: Create partitions (monthly for an example)
+-- can be adjusted for quarterly, yearly, etc.
 -- ======================================
 
 CREATE TABLE Booking_2024_01 PARTITION OF Booking
